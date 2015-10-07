@@ -19,8 +19,8 @@ public class AmbientTemperatureActivity extends AppCompatActivity implements Sen
      */
     private TextView sensorData;
 
-    private SensorManager senseManage;
-    private Sensor envSense;
+    private SensorManager mSensorManager;
+    private Sensor mAmbientTemperature;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,22 +31,22 @@ public class AmbientTemperatureActivity extends AppCompatActivity implements Sen
         title.setText(getString(R.string.ambient_temperature_activity));
         sensorData = (TextView) findViewById(R.id.sensor_data);
 
-        senseManage = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        envSense = senseManage.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE);
+        mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        mAmbientTemperature = mSensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE);
 
-        if(envSense == null) {
+        if(mAmbientTemperature == null) {
             Toast.makeText(this.getApplicationContext(),
                     "Sorry - your device doesn't have an ambient temperature sensor!",
                     Toast.LENGTH_SHORT).show();
         } else {
-            senseManage.registerListener(this, envSense, SensorManager.SENSOR_DELAY_NORMAL);
+            mSensorManager.registerListener(this, mAmbientTemperature, SensorManager.SENSOR_DELAY_NORMAL);
         }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        senseManage.unregisterListener(this);
+        mSensorManager.unregisterListener(this);
     }
 
     @Override

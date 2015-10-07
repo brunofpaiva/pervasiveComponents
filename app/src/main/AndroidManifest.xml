@@ -28,11 +28,11 @@
             android:label="@string/ambient_temperature_activity"
             android:launchMode="singleInstance" >
         </activity>
-        <!--<activity-->
-            <!--android:name=".activities.GravityActivity"-->
-            <!--android:label="@string/gravity_activity"-->
-            <!--android:launchMode="singleInstance" >-->
-        <!--</activity>-->
+        <activity
+            android:name=".activities.GravityActivity"
+            android:label="@string/gravity_activity"
+            android:launchMode="singleInstance" >
+        </activity>
         <!--<activity-->
             <!--android:name=".activities.GyroscopeActivity"-->
             <!--android:label="@string/gyroscope_activity"-->

@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import development.master.com.pervasivecomponents.activities.AccelerometerActivity;
 import development.master.com.pervasivecomponents.activities.AmbientTemperatureActivity;
+import development.master.com.pervasivecomponents.activities.GravityActivity;
 import development.master.com.pervasivecomponents.activities.LightActivity;
 import development.master.com.pervasivecomponents.activities.PressureActivity;
 import development.master.com.pervasivecomponents.activities.RelativeHumidityActivity;
@@ -146,7 +147,7 @@ public class HomeActivity extends AppCompatActivity {
 
             case GRAVITY_SENSOR:
 
-//                intent = new Intent(this, GravityActivity.class);
+                intent = new Intent(this, GravityActivity.class);
                 break;
 
             case GYROSCOPE_SENSOR:

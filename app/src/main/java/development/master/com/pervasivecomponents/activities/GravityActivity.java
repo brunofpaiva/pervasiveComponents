@@ -19,8 +19,8 @@ public class GravityActivity extends AppCompatActivity implements SensorEventLis
      */
     private TextView sensorData;
 
-    private SensorManager senseManage;
-    private Sensor envSense;
+    private SensorManager mSensorManager;
+    private Sensor mGravity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,21 +31,21 @@ public class GravityActivity extends AppCompatActivity implements SensorEventLis
         title.setText(getString(R.string.ambient_temperature_activity));
         sensorData = (TextView) findViewById(R.id.sensor_data);
 
-        senseManage = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        envSense = senseManage.getDefaultSensor(Sensor.TYPE_GRAVITY);
-        if(envSense == null) {
+        mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        mGravity = mSensorManager.getDefaultSensor(Sensor.TYPE_GRAVITY);
+        if(mGravity == null) {
             Toast.makeText(this.getApplicationContext(),
                     "Sorry - your device doesn't have a gravity sensor!",
                     Toast.LENGTH_SHORT).show();
         } else {
-            senseManage.registerListener(this, envSense, SensorManager.SENSOR_DELAY_NORMAL);
+            mSensorManager.registerListener(this, mGravity, SensorManager.SENSOR_DELAY_NORMAL);
         }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        senseManage.unregisterListener(this);
+        mSensorManager.unregisterListener(this);
     }
 
     @Override
