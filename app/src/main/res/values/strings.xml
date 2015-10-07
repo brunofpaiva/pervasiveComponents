@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">PervasiveComponents</string>
+    <string name="home_acitivity">Sensors</string>
+
+    <string name="accelerometer_activity">Accelerometer Activity</string>
+    <string name="ambient_temperature_activity">Ambient Temperature Activity</string>
+    <string name="gravity_activity">Gravity Activity</string>
+    <string name="gyroscope_activity">Gyroscope Activity</string>
+    <string name="light_activity">Light Activity</string>
+    <string name="linear_acceleration_activity">Linear Acceleration Activity</string>
+    <string name="magnetic_filed_activity">Magnetic Field Activity</string>
+    <string name="orientation_activity">Orientation Activity</string>
+    <string name="pressure_activity">Pressure Activity</string>
+    <string name="proximity_activity">Proximity Activity</string>
+    <string name="relative_humidity_activity">Relative Humidity Activity</string>
+    <string name="rotation_vector_activity">Rotation Vector Activity</string>
+    <string name="temperature_activity">Temperature Activity</string>
+</resources>

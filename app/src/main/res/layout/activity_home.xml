@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/sensorAccelerometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text="@string/accelerometer_activity"/>
+
+    <TextView
+        android:id="@+id/sensorAmbientTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sensorAccelerometer"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text="@string/ambient_temperature_activity"/>
+
+    <TextView
+        android:id="@+id/sensorGravity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sensorAmbientTemperature"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text="@string/gravity_activity"/>
+
+    <TextView
+        android:id="@+id/sensorGyroscope"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sensorGravity"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text="@string/gyroscope_activity"/>
+
+    <TextView
+        android:id="@+id/sensorLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sensorGyroscope"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text="@string/light_activity"/>
+
+    <TextView
+        android:id="@+id/sensorLinearAcceleration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sensorLight"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text="@string/linear_acceleration_activity"/>
+
+    <TextView
+        android:id="@+id/sensorMagneticField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sensorLinearAcceleration"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text="@string/magnetic_filed_activity"/>
+
+    <TextView
+        android:id="@+id/sensorOrientation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sensorMagneticField"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text="@string/orientation_activity"/>
+
+    <TextView
+        android:id="@+id/sensorPressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sensorOrientation"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text="@string/pressure_activity"/>
+
+    <TextView
+        android:id="@+id/sensorProximity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sensorPressure"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text="@string/proximity_activity"/>
+
+    <TextView
+        android:id="@+id/sensorRelativeHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sensorProximity"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text="@string/relative_humidity_activity"/>
+
+    <TextView
+        android:id="@+id/sensorRotationVector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sensorRelativeHumidity"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text="@string/rotation_vector_activity"/>
+
+    <TextView
+        android:id="@+id/sensorTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sensorRotationVector"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text="@string/temperature_activity"/>
+
+</RelativeLayout>
