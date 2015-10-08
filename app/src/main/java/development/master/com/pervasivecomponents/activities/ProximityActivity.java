@@ -21,7 +21,7 @@ public class ProximityActivity extends AppCompatActivity implements SensorEventL
     private TextView sensorData;
 
     private SensorManager mSensorManager;
-    private Sensor mOrientation;
+    private Sensor mProximity;
     private long lastUpdate = 0;
 
     @Override
@@ -30,25 +30,25 @@ public class ProximityActivity extends AppCompatActivity implements SensorEventL
         setContentView(R.layout.sensor_activity);
 
         final TextView title = (TextView) findViewById(R.id.sensor_title);
-        title.setText(getString(R.string.orientation_activity));
+        title.setText(getString(R.string.proximity_activity));
         sensorData = (TextView) findViewById(R.id.sensor_data);
         sensorData.setVisibility(View.VISIBLE);
 
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        mOrientation = mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
-        if(mOrientation == null) {
+        mProximity = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+        if(mProximity == null) {
             Toast.makeText(this.getApplicationContext(),
-                    "Sorry - your device doesn't have a orientation sensor!",
+                    "Sorry - your device doesn't have a proximity sensor!",
                     Toast.LENGTH_SHORT).show();
         } else {
-            mSensorManager.registerListener(this, mOrientation, SensorManager.SENSOR_DELAY_NORMAL);
+            mSensorManager.registerListener(this, mProximity, SensorManager.SENSOR_DELAY_NORMAL);
         }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        mSensorManager.registerListener(this, mOrientation, SensorManager.SENSOR_DELAY_NORMAL);
+        mSensorManager.registerListener(this, mProximity, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     @Override
@@ -60,15 +60,11 @@ public class ProximityActivity extends AppCompatActivity implements SensorEventL
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
         final Sensor mySensor = sensorEvent.sensor;
-        if (mySensor.getType() == Sensor.TYPE_ORIENTATION) {
-            float x = sensorEvent.values[0];
-            float y = sensorEvent.values[1];
-            float z = sensorEvent.values[2];
-
-            long curTime = System.currentTimeMillis();
-            if ((curTime - lastUpdate) > 100) {
-                sensorData.setText("Orientation Value: " + x);
-                lastUpdate = curTime;
+        if (mySensor.getType() == Sensor.TYPE_PROXIMITY) {
+            if (sensorEvent.values[0] == 0) {
+                sensorData.setText("Near");
+            } else {
+                sensorData.setText("Far");
             }
         }
     }

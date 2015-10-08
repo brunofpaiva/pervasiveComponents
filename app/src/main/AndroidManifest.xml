@@ -26,6 +26,7 @@
         </activity>
         <activity
             android:name=".activities.AmbientTemperatureActivity"
+            android:screenOrientation="portrait"
             android:label="@string/ambient_temperature_activity"
             android:launchMode="singleInstance" >
         </activity>
@@ -43,46 +44,55 @@
         </activity>
         <activity
             android:name=".activities.LightActivity"
+            android:screenOrientation="portrait"
             android:label="@string/light_activity"
             android:launchMode="singleInstance" >
         </activity>
         <activity
             android:name=".activities.LinearAccelerationActivity"
+            android:screenOrientation="portrait"
             android:label="@string/linear_acceleration_activity"
             android:launchMode="singleInstance" >
         </activity>
         <activity
             android:name=".activities.MagneticFieldActivity"
+            android:screenOrientation="portrait"
             android:label="@string/magnetic_field_activity"
             android:launchMode="singleInstance" >
         </activity>
         <activity
             android:name=".activities.OrientationActivity"
+            android:screenOrientation="portrait"
             android:label="@string/orientation_activity"
             android:launchMode="singleInstance" >
         </activity>
         <activity
             android:name=".activities.PressureActivity"
+            android:screenOrientation="portrait"
             android:label="@string/pressure_activity"
             android:launchMode="singleInstance" >
         </activity>
         <activity
             android:name=".activities.ProximityActivity"
+            android:screenOrientation="portrait"
             android:label="@string/proximity_activity"
             android:launchMode="singleInstance" >
         </activity>
         <activity
             android:name=".activities.RelativeHumidityActivity"
+            android:screenOrientation="portrait"
             android:label="@string/relative_humidity_activity"
             android:launchMode="singleInstance" >
         </activity>
         <activity
             android:name=".activities.RotationVectorActivity"
+            android:screenOrientation="portrait"
             android:label="@string/rotation_vector_activity"
             android:launchMode="singleInstance" >
         </activity>
         <activity
             android:name=".activities.TemperatureActivity"
+            android:screenOrientation="portrait"
             android:label="@string/temperature_activity"
             android:launchMode="singleInstance" >
         </activity>

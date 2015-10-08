@@ -52,7 +52,6 @@ public class AmbientTemperatureActivity extends AppCompatActivity implements Sen
     @Override
     public void onSensorChanged(SensorEvent event) {
         float sensorValue = event.values[0];
-
         String envInfo = "";
 
         if (event.sensor.getType() == Sensor.TYPE_AMBIENT_TEMPERATURE) {
