@@ -9,6 +9,7 @@
 
         <activity
             android:name=".HomeActivity"
+            android:screenOrientation="portrait"
             android:label="@string/home_acitivity"
             android:launchMode="singleInstance">
             <intent-filter>
@@ -30,59 +31,61 @@
         </activity>
         <activity
             android:name=".activities.GravityActivity"
+            android:screenOrientation="portrait"
             android:label="@string/gravity_activity"
             android:launchMode="singleInstance" >
         </activity>
-        <!--<activity-->
-            <!--android:name=".activities.GyroscopeActivity"-->
-            <!--android:label="@string/gyroscope_activity"-->
-            <!--android:launchMode="singleInstance" >-->
-        <!--</activity>-->
+        <activity
+            android:name=".activities.GyroscopeActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/gyroscope_activity"
+            android:launchMode="singleInstance" >
+        </activity>
         <activity
             android:name=".activities.LightActivity"
             android:label="@string/light_activity"
             android:launchMode="singleInstance" >
         </activity>
-        <!--<activity-->
-        <!--android:name=".activities.LinearAccelerationActivity"-->
-        <!--android:label="@string/linear_acceleration_activity"-->
-        <!--android:launchMode="singleInstance" >-->
-        <!--</activity>-->
-        <!--<activity-->
-        <!--android:name=".activities.MagneticFieldActivity"-->
-        <!--android:label="@string/magnetic_field_activity"-->
-        <!--android:launchMode="singleInstance" >-->
-        <!--</activity>-->
-        <!--<activity-->
-        <!--android:name=".activities.OrientationActivity"-->
-        <!--android:label="@string/orientation_activity"-->
-        <!--android:launchMode="singleInstance" >-->
-        <!--</activity>-->
         <activity
-        android:name=".activities.PressureActivity"
-        android:label="@string/pressure_activity"
-        android:launchMode="singleInstance" >
+            android:name=".activities.LinearAccelerationActivity"
+            android:label="@string/linear_acceleration_activity"
+            android:launchMode="singleInstance" >
         </activity>
-        <!--<activity-->
-            <!--android:name=".activities.ProximityActivity"-->
-            <!--android:label="@string/proximity_activity"-->
-            <!--android:launchMode="singleInstance" >-->
-        <!--</activity>-->
         <activity
-        android:name=".activities.RelativeHumidityActivity"
-        android:label="@string/relative_humidity_activity"
-        android:launchMode="singleInstance" >
+            android:name=".activities.MagneticFieldActivity"
+            android:label="@string/magnetic_field_activity"
+            android:launchMode="singleInstance" >
         </activity>
-        <!--<activity-->
-            <!--android:name=".activities.RotationVectorActivity"-->
-            <!--android:label="@string/rotation_vector_activity"-->
-            <!--android:launchMode="singleInstance" >-->
-        <!--</activity>-->
-        <!--<activity-->
-            <!--android:name=".activities.TemperatureActivity"-->
-            <!--android:label="@string/temperature_activity"-->
-            <!--android:launchMode="singleInstance" >-->
-        <!--</activity>-->
+        <activity
+            android:name=".activities.OrientationActivity"
+            android:label="@string/orientation_activity"
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity
+            android:name=".activities.PressureActivity"
+            android:label="@string/pressure_activity"
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity
+            android:name=".activities.ProximityActivity"
+            android:label="@string/proximity_activity"
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity
+            android:name=".activities.RelativeHumidityActivity"
+            android:label="@string/relative_humidity_activity"
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity
+            android:name=".activities.RotationVectorActivity"
+            android:label="@string/rotation_vector_activity"
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity
+            android:name=".activities.TemperatureActivity"
+            android:label="@string/temperature_activity"
+            android:launchMode="singleInstance" >
+        </activity>
 
     </application>
 

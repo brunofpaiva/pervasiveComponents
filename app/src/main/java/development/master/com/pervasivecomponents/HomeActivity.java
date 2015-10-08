@@ -9,9 +9,16 @@ import android.widget.TextView;
 import development.master.com.pervasivecomponents.activities.AccelerometerActivity;
 import development.master.com.pervasivecomponents.activities.AmbientTemperatureActivity;
 import development.master.com.pervasivecomponents.activities.GravityActivity;
+import development.master.com.pervasivecomponents.activities.GyroscopeActivity;
 import development.master.com.pervasivecomponents.activities.LightActivity;
+import development.master.com.pervasivecomponents.activities.LinearAccelerationActivity;
+import development.master.com.pervasivecomponents.activities.MagneticFieldActivity;
+import development.master.com.pervasivecomponents.activities.OrientationActivity;
 import development.master.com.pervasivecomponents.activities.PressureActivity;
+import development.master.com.pervasivecomponents.activities.ProximityActivity;
 import development.master.com.pervasivecomponents.activities.RelativeHumidityActivity;
+import development.master.com.pervasivecomponents.activities.RotationVectorActivity;
+import development.master.com.pervasivecomponents.activities.TemperatureActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -152,7 +159,7 @@ public class HomeActivity extends AppCompatActivity {
 
             case GYROSCOPE_SENSOR:
 
-//                intent = new Intent(this, GyroscopeActivity.class);
+                intent = new Intent(this, GyroscopeActivity.class);
                 break;
 
             case LIGHT_SENSOR:
@@ -161,13 +168,17 @@ public class HomeActivity extends AppCompatActivity {
                 break;
 
             case LINEAR_ACCELERATION_SENSOR:
-//                intent = new Intent(this, LinearAccelerationActivity.class);
+                intent = new Intent(this, LinearAccelerationActivity.class);
                 break;
 
             case MAGNETIC_FIELD_SENSOR:
+
+                intent = new Intent(this, MagneticFieldActivity.class);
                 break;
 
             case ORIENTATION_SENSOR:
+
+                intent = new Intent(this, OrientationActivity.class);
                 break;
 
             case PRESSURE_SENSOR:
@@ -176,16 +187,23 @@ public class HomeActivity extends AppCompatActivity {
                 break;
 
             case PROXIMITY_SENSOR:
+
+                intent = new Intent(this, ProximityActivity.class);
                 break;
 
             case RELATIVE_HUMIDITY_SENSOR:
+
                 intent = new Intent(this, RelativeHumidityActivity.class);
                 break;
 
             case ROTATION_VECTOR_SENSOR:
+
+                intent = new Intent(this, RotationVectorActivity.class);
                 break;
 
             case TEMPERATURE_SENSOR:
+
+                intent = new Intent(this, TemperatureActivity.class);
                 break;
 
         }

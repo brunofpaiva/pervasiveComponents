@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import development.master.com.pervasivecomponents.R;
 
-public class GravityActivity extends AppCompatActivity implements SensorEventListener {
+public class GyroscopeActivity extends AppCompatActivity implements SensorEventListener {
 
     /**
      * TextView which will update all sensor information.
@@ -21,7 +21,7 @@ public class GravityActivity extends AppCompatActivity implements SensorEventLis
     private TextView sensorData;
 
     private SensorManager mSensorManager;
-    private Sensor mGravity;
+    private Sensor mGyroscope;
     private long lastUpdate = 0;
 
     @Override
@@ -30,25 +30,25 @@ public class GravityActivity extends AppCompatActivity implements SensorEventLis
         setContentView(R.layout.sensor_activity);
 
         final TextView title = (TextView) findViewById(R.id.sensor_title);
-        title.setText(getString(R.string.gravity_activity));
+        title.setText(getString(R.string.gyroscope_activity));
         sensorData = (TextView) findViewById(R.id.sensor_data);
         sensorData.setVisibility(View.VISIBLE);
 
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        mGravity = mSensorManager.getDefaultSensor(Sensor.TYPE_GRAVITY);
-        if(mGravity == null) {
+        mGyroscope = mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
+        if(mGyroscope == null) {
             Toast.makeText(this.getApplicationContext(),
-                    "Sorry - your device doesn't have a gravity sensor!",
+                    "Sorry - your device doesn't have a gyroscope sensor!",
                     Toast.LENGTH_SHORT).show();
         } else {
-            mSensorManager.registerListener(this, mGravity, SensorManager.SENSOR_DELAY_NORMAL);
+            mSensorManager.registerListener(this, mGyroscope, SensorManager.SENSOR_DELAY_NORMAL);
         }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        mSensorManager.registerListener(this, mGravity, SensorManager.SENSOR_DELAY_NORMAL);
+        mSensorManager.registerListener(this, mGyroscope, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     @Override
@@ -60,16 +60,16 @@ public class GravityActivity extends AppCompatActivity implements SensorEventLis
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
         final Sensor mySensor = sensorEvent.sensor;
-        if (mySensor.getType() == Sensor.TYPE_GRAVITY) {
+        if (mySensor.getType() == Sensor.TYPE_GYROSCOPE) {
             float x = sensorEvent.values[0];
             float y = sensorEvent.values[1];
             float z = sensorEvent.values[2];
 
             long curTime = System.currentTimeMillis();
             if ((curTime - lastUpdate) > 100) {
-                sensorData.setText("Force of Gravity in X: " + x + "\n" +
-                        "Force of Gravity in Y: " + y + "\n" +
-                        "Force of Gravity in Z: " + z);
+                sensorData.setText("Gyroscope X: " + x + "\n" +
+                                    "Gyroscope Y: " + y + "\n" +
+                                    "Gyroscope Z: " + z);
 
                 lastUpdate = curTime;
             }

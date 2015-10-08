@@ -77,7 +77,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="16dp"
         android:textSize="16sp"
-        android:text="@string/magnetic_filed_activity"/>
+        android:text="@string/magnetic_field_activity"/>
 
     <TextView
         android:id="@+id/sensorOrientation"

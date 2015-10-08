@@ -7,6 +7,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,7 +18,7 @@ public class AccelerometerActivity extends AppCompatActivity implements SensorEv
     /**
      * TextView which will update all sensor information.
      */
-//    private TextView sensorDataTextView;
+    private TextView sensorDataTextView;
 
     private SensorManager mSensorManager;
     private Sensor mAccelerometer;
@@ -32,7 +33,8 @@ public class AccelerometerActivity extends AppCompatActivity implements SensorEv
 
         final TextView title = (TextView) findViewById(R.id.sensor_title);
         title.setText(getString(R.string.accelerometer_activity));
-//        sensorDataTextView = (TextView) findViewById(R.id.sensor_data);
+        sensorDataTextView = (TextView) findViewById(R.id.sensor_data);
+        sensorDataTextView.setVisibility(View.VISIBLE);
 
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
@@ -59,6 +61,8 @@ public class AccelerometerActivity extends AppCompatActivity implements SensorEv
 
             long curTime = System.currentTimeMillis();
             if ((curTime - lastUpdate) > 100) {
+                sensorDataTextView.setText("X: " + x + "\n" + "Y: " + y + "\n" + "Z: " + z);
+
                 long diffTime = (curTime - lastUpdate);
                 lastUpdate = curTime;
 

@@ -8,7 +8,7 @@
     <string name="gyroscope_activity">Gyroscope Activity</string>
     <string name="light_activity">Light Activity</string>
     <string name="linear_acceleration_activity">Linear Acceleration Activity</string>
-    <string name="magnetic_filed_activity">Magnetic Field Activity</string>
+    <string name="magnetic_field_activity">Magnetic Field Activity</string>
     <string name="orientation_activity">Orientation Activity</string>
     <string name="pressure_activity">Pressure Activity</string>
     <string name="proximity_activity">Proximity Activity</string>
